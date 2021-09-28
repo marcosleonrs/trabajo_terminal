@@ -69,7 +69,7 @@ int main(int argv,char *args[]){
 
 	/*for(int i=0;i<segundos*2-1;i++){
 		for(int j=0;j<muestras;j++){
-			printf("%lf\n",epochs[i][j]);
+			printf("%f\n",epochs[i][j]);
 		}
 	}*/
 
@@ -84,7 +84,7 @@ int main(int argv,char *args[]){
 
 	/*for(int i=0;i<segundos*2-1;i++){
 		for(int j=0;j<muestras;j++){
-			printf("%lf\n",epochs[i][j]);
+			printf("%f\n",epochs[i][j]);
 		}
 		break;
 	}*/
@@ -125,7 +125,7 @@ int main(int argv,char *args[]){
 			float imag = fft[i][j].imag/muestras;
 
 			magnitud[i][j]=sqrt(pow(real,2)+pow(imag,2));	
-			//printf("%lf\n",magnitud[i][j]);
+			//printf("%f\n",magnitud[i][j]);
 		}
 	}
 
@@ -145,7 +145,7 @@ int main(int argv,char *args[]){
 
 	for(int i=0;i<muestras;i++){
 		magnitudFinal[i]/=(segundos*2-1);
-		//printf("%lf\n",magnitudFinal[i]);
+		//printf("%f\n",magnitudFinal[i]);
 	}
 
 	printf("AV ALFA BAND [8-13Hz] %f", magnitudFinal[7] + magnitudFinal[8] + magnitudFinal[9] + magnitudFinal[10] + magnitudFinal[11]);
